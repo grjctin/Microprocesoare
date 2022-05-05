@@ -1,0 +1,31 @@
+	.data
+Prompt:
+	.asciiz "Introduceti numarul n = "
+Prompt1:
+	.asciiz "Introduceti numarul k = "
+PrintfFormat1:
+	.asciiz "Combinari= %d :\n"
+PrintfFormat2:
+	.asciiz "Aranjamente= %d :\n"
+PrintfPar1:
+	.word PrintfFormat1 
+PrintfValue1:
+	.space 4 
+PrintfPar2:
+	.word PrintfFormat2 
+PrintfValue2:
+	.space 4 
+	.text
+	.global main
+main:
+	addi r1,r0,Prompt       ;citire n
+	jal InputUnsigned	;r1 = retine numarul n
+	addi r2,r0,r1		;r2 retine numarul n
+	addi r1,r0,Prompt1	;citire k
+	jal InputUnsigned	;r1 = retine numarul k
+	addi r3,r0,r1		;r3 retine numarul k
+
+	sw PrintfValue1,r3
+	addi r14,r0,PrintfPar1
+	trap 5
+	trap 0
