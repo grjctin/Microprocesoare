@@ -1,0 +1,4 @@
+Sà se rezolve in limbaj de asamblare DLX:
+4. Se citeste un numar n natural (> 0) de la tastatură (se va face testul de pozitivitate). Să se
+transforme si să se afiseze numărul n in baza k (unde k este si el natural (>0) citit de la
+tastatură).
